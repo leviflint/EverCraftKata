@@ -49,7 +49,15 @@ evilAlignment.addEventListener('click', () => {
     characterWisdom.style.display = "inherit"
     characterIntelligence.style.display = "inherit"
     characterCharisma.style.display = "inherit"
-})
+    characterArmor.innerText = `Armor: ${newCharacter.characterArmor}`;
+    characterHealth.innerText = `Hit Points: ${newCharacter.characterHitPoints}`;
+    characterStrength.innerText = `Strength: ${newCharacter.characterStrength}`;
+    characterDexterity.innerText = `Dexterity: ${newCharacter.characterDexterity}`;
+    characterConstitution.innerText = `Constitution: ${newCharacter.characterConstitution}`;
+    characterWisdom.innerText = `Wisdom: ${newCharacter.characterWisdom}`;
+    characterIntelligence.innerText = `Intelligence: ${newCharacter.characterIntelligence}`;
+    characterCharisma.innerText = `Charisma: ${newCharacter.characterCharisma}`;
+    })
 
 neutralAlignment.addEventListener('click', () => {
     newCharacter.characterAlignment = "Neutral"
@@ -71,6 +79,14 @@ neutralAlignment.addEventListener('click', () => {
     characterWisdom.style.display = "inherit"
     characterIntelligence.style.display = "inherit"
     characterCharisma.style.display = "inherit"
+    characterArmor.innerText = `Armor: ${newCharacter.characterArmor}`;
+    characterHealth.innerText = `Hit Points: ${newCharacter.characterHitPoints}`;
+    characterStrength.innerText = `Strength: ${newCharacter.characterStrength}`;
+    characterDexterity.innerText = `Dexterity: ${newCharacter.characterDexterity}`;
+    characterConstitution.innerText = `Constitution: ${newCharacter.characterConstitution}`;
+    characterWisdom.innerText = `Wisdom: ${newCharacter.characterWisdom}`;
+    characterIntelligence.innerText = `Intelligence: ${newCharacter.characterIntelligence}`;
+    characterCharisma.innerText = `Charisma: ${newCharacter.characterCharisma}`;
 })
 
 goodAlignment.addEventListener('click', () => {
@@ -93,6 +109,14 @@ goodAlignment.addEventListener('click', () => {
     characterWisdom.style.display = "inherit"
     characterIntelligence.style.display = "inherit"
     characterCharisma.style.display = "inherit"
+    characterArmor.innerText = `Armor: ${newCharacter.characterArmor}`;
+    characterHealth.innerText = `Hit Points: ${newCharacter.characterHitPoints}`;
+    characterStrength.innerText = `Strength: ${newCharacter.characterStrength}`;
+    characterDexterity.innerText = `Dexterity: ${newCharacter.characterDexterity}`;
+    characterConstitution.innerText = `Constitution: ${newCharacter.characterConstitution}`;
+    characterWisdom.innerText = `Wisdom: ${newCharacter.characterWisdom}`;
+    characterIntelligence.innerText = `Intelligence: ${newCharacter.characterIntelligence}`;
+    characterCharisma.innerText = `Charisma: ${newCharacter.characterCharisma}`;
 })
 
 function rollDice() {

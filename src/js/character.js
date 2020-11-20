@@ -219,6 +219,3 @@ class Character {
 }
 
 export { Character }
-
-
-
