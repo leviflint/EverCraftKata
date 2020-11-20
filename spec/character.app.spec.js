@@ -1,5 +1,3 @@
-
-
 describe("Can create a character", () => {
   describe("Can set starting character values", () => {
     let underTest;

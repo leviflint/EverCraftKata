@@ -10,11 +10,14 @@
       <header>
         <h1 class="title">EverCraft Kata</h1>
       </header>
-      <h2 class="character-name">Test</h2>
+      <div class="character">
+        <h2 class="character-name">Test</h2>
+        <h3 id="character-alignment" class="character-alignment"></h3>
+        <button id="evil-alignment" class="evil-alignment">Evil</button>
+        <button id="neutral-alignment" class="neutral-alignment">Neutral</button>
+        <button id="good-alignment" class="good-alignment">Good</button>
+      </div>
       <div class="character-stats">
-        <button class="evil-alignment">Evil</button>
-        <button class="neutral-alignment">Neutral</button>
-        <button class="good-alignment">Good</button>
         <p class="character-armor">Armor: 10</p>
         <p class="character-health">Hit Points: 5</p>
         <p class="character-strength">Strength: 10</p>
@@ -26,4 +29,5 @@
       </div>
     </div>
   </body>
+  <script src="src/js/app.js" type="module"></script>
 </html>

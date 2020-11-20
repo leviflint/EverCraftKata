@@ -12,5 +12,13 @@ class Character {
         this.characterCharisma = 10;
         this.characterExperience = 0;
     }
+
+    rollStrength() {
+        
+    }
 }
+
+export { Character }
+
+
 
