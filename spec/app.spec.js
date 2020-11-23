@@ -10,21 +10,27 @@ describe("Logic Testing", () => {
     });
     it("Strength modifier works", () => {
       console.log(underTest.rollStrength());
+      console.log(undertest.characterStrengthModifier)
     });
     it("Dexterity modifier works", () => {
       console.log(underTest.rollDexterity());
+      console.log(undertest.characterDexterityModifier)
     });
     it("Constitution modifier works", () => {
       console.log(underTest.rollConstitution());
+      console.log(underTest.characterConstitutionModifier)
     });
     it("Wisdom modifier works", () => {
       console.log(underTest.rollWisdom());
+      console.log(underTest.characterWisdomModifier)
     });
     it("Intelligence modifier works", () => {
       console.log(underTest.rollIntelligence());
+      console.log(underTest.characterIntelligenceModifier)
     });
     it("Charisma modifier works", () => {
       console.log(underTest.rollCharisma());
+      console.log(underTest.characterCharismaModifier)
     });
   });
 });

@@ -1,221 +1,267 @@
 class Character {
-    constructor() {
-        this.characterName;
-        this.characterAlignment;
-        this.characterArmor = 10;
-        this.characterHitPoints = 5;
-        this.characterStrength = 10;
-        this.characterDexterity = 10;
-        this.characterConstitution = 10;
-        this.characterWisdom = 10;
-        this.characterIntelligence = 10;
-        this.characterCharisma = 10;
-        this.characterExperience = 0;
-    }
+  constructor() {
+    this.characterName;
+    this.characterAlignment;
+    this.characterArmor = 10;
+    this.characterHitPoints = 5;
+    this.characterStrength = 10;
+    this.characterStrengthModifier;
+    this.characterDexterity = 10;
+    this.characterDexterityModifier;
+    this.characterConstitution = 10;
+    this.characterConstitutionModifier;
+    this.characterWisdom = 10;
+    this.characterWisdomModifier;
+    this.characterIntelligence = 10;
+    this.characterIntelligenceModifier;
+    this.characterCharisma = 10;
+    this.characterCharismaModifier;
+    this.characterExperience = 0;
+    this.characterLevel = 1;
+    this.characterAttackRoll = 1;
+  }
 
-    rollStrength() {
-        let strengthModifier = Math.floor((Math.random() * 20) + 1);
-        if (strengthModifier == 1) {
-            this.characterStrength -= 5;
-        }
-        if (strengthModifier == 2 || strengthModifier == 3) {
-            this.characterStrength -= 4;
-        }
-        if (strengthModifier == 4 || strengthModifier == 5) {
-            this.characterStrength -= 3;
-        }
-        if (strengthModifier == 6 || strengthModifier == 7) {
-            this.characterStrength -= 2;
-        }
-        if (strengthModifier == 8 || strengthModifier == 9) {
-            this.characterStrength -= 1;
-        }
-        if (strengthModifier == 12 || strengthModifier == 13) {
-            this.characterStrength += 1;
-        }
-        if (strengthModifier == 14 || strengthModifier == 15) {
-            this.characterStrength += 2;
-        }
-        if (strengthModifier == 16 || strengthModifier == 17) {
-            this.characterStrength += 3;
-        }
-        if (strengthModifier == 18 || strengthModifier == 19) {
-            this.characterStrength += 4
-        }
-        if (strengthModifier == 20) {
-            this.characterStrength += 5;
-        }
+  rollStrength() {
+    let strengthModifierRoll = Math.floor(Math.random() * 20 + 1);
+    if (strengthModifierRoll == 1) {
+      this.characterStrengthModifier = -5;
     }
+    if (strengthModifierRoll == 2 || strengthModifierRoll == 3) {
+      this.characterStrengthModifier = -4;
+    }
+    if (strengthModifierRoll == 4 || strengthModifierRoll == 5) {
+      this.characterStrengthModifier = -3;
+    }
+    if (strengthModifierRoll == 6 || strengthModifierRoll == 7) {
+      this.characterStrengthModifier = -2;
+    }
+    if (strengthModifierRoll == 8 || strengthModifierRoll == 9) {
+      this.characterStrengthModifier = -1;
+    }
+    if (strengthModifierRoll == 10 || strengthModifierRoll == 11) {
+      this.characterStrengthModifier = 0;
+    } 
+    if (strengthModifierRoll == 12 || strengthModifierRoll == 13) {
+      this.characterStrengthModifier = 1;
+    }
+    if (strengthModifierRoll == 14 || strengthModifierRoll == 15) {
+      this.characterStrengthModifier = 2;
+    }
+    if (strengthModifierRoll == 16 || strengthModifierRoll == 17) {
+      this.characterStrengthModifier = 3;
+    }
+    if (strengthModifierRoll == 18 || strengthModifierRoll == 19) {
+      this.characterStrengthModifier = 4;
+    }
+    if (strengthModifierRoll == 20) {
+      this.characterStrengthModifier = 5;
+    }
+    this.characterStrength += this.characterStrengthModifier;
+  }
 
-    rollDexterity() {
-        let dexterityModifier = Math.floor((Math.random() * 20) + 1);
-        if (dexterityModifier == 1) {
-            this.characterDexterity -= 5;
-        }
-        if (dexterityModifier == 2 || dexterityModifier == 3) {
-            this.characterDexterity -= 4;
-        }
-        if (dexterityModifier == 4 || dexterityModifier == 5) {
-            this.characterDexterity -= 3;
-        }
-        if (dexterityModifier == 6 || dexterityModifier == 7) {
-            this.characterDexterity -= 2;
-        }
-        if (dexterityModifier == 8 || dexterityModifier == 9) {
-            this.characterDexterity -= 1;
-        }
-        if (dexterityModifier == 12 || dexterityModifier == 13) {
-            this.characterDexterity += 1;
-        }
-        if (dexterityModifier == 14 || dexterityModifier == 15) {
-            this.characterDexterity += 2;
-        }
-        if (dexterityModifier == 16 || dexterityModifier == 17) {
-            this.characterDexterity += 3;
-        }
-        if (dexterityModifier == 18 || dexterityModifier == 19) {
-            this.characterDexterity += 4
-        }
-        if (dexterityModifier == 20) {
-            this.characterDexterity += 5;
-        }
+  rollDexterity() {
+    let dexterityModifierRoll = Math.floor(Math.random() * 20 + 1);
+    if (dexterityModifierRoll == 1) {
+      this.characterDexterityModifier = -5;
     }
+    if (dexterityModifierRoll == 2 || dexterityModifierRoll == 3) {
+      this.characterDexterityModifier = -4;
+    }
+    if (dexterityModifierRoll == 4 || dexterityModifierRoll == 5) {
+      this.characterDexterityModifier = -3;
+    }
+    if (dexterityModifierRoll == 6 || dexterityModifierRoll == 7) {
+      this.characterDexterityModifier = -2;
+    }
+    if (dexterityModifierRoll == 8 || dexterityModifierRoll == 9) {
+      this.characterDexterityModifier = -1;
+    }
+    if (dexterityModifierRoll == 10 || dexterityModifierRoll == 11) {
+      this.characterDexterityModifier = 0;
+    }
+    if (dexterityModifierRoll == 12 || dexterityModifierRoll == 13) {
+      this.characterDexterityModifier = 1;
+    }
+    if (dexterityModifierRoll == 14 || dexterityModifierRoll == 15) {
+      this.characterDexterityModifier = 2;
+    }
+    if (dexterityModifierRoll == 16 || dexterityModifierRoll == 17) {
+      this.characterDexterityModifier = 3;
+    }
+    if (dexterityModifierRoll == 18 || dexterityModifierRoll == 19) {
+      this.characterDexterityModifier = 4;
+    }
+    if (dexterityModifierRoll == 20) {
+      this.characterDexterityModifier = 5;
+    }
+    this.characterArmor += this.characterDexterityModifier;
+    this.characterDexterity += this.characterDexterityModifier;
+  }
 
-    rollConstitution() {
-        let constitutionModifier = Math.floor((Math.random() * 20) + 1);
-        if (constitutionModifier == 1) {
-            this.characterConstitution -= 5;
-        }
-        if (constitutionModifier == 2 || constitutionModifier == 3) {
-            this.characterConstitution -= 4;
-        }
-        if (constitutionModifier == 4 || constitutionModifier == 5) {
-            this.characterConstitution -= 3;
-        }
-        if (constitutionModifier == 6 || constitutionModifier == 7) {
-            this.characterConstitution -= 2;
-        }
-        if (constitutionModifier == 8 || constitutionModifier == 9) {
-            this.characterConstitution -= 1;
-        }
-        if (constitutionModifier == 12 || constitutionModifier == 13) {
-            this.characterConstitution += 1;
-        }
-        if (constitutionModifier == 14 || constitutionModifier == 15) {
-            this.characterConstitution += 2;
-        }
-        if (constitutionModifier == 16 || constitutionModifier == 17) {
-            this.characterConstitution += 3;
-        }
-        if (constitutionModifier == 18 || constitutionModifier == 19) {
-            this.characterConstitution += 4
-        }
-        if (constitutionModifier == 20) {
-            this.characterConstitution += 5;
-        }
+  rollConstitution() {
+    let constitutionModifierRoll = Math.floor(Math.random() * 20 + 1);
+    if (constitutionModifierRoll == 1) {
+      this.characterConstitutionModifier = -5;
     }
+    if (constitutionModifierRoll == 2 || constitutionModifierRoll == 3) {
+      this.characterConstitutionModifier = -4;
+    }
+    if (constitutionModifierRoll == 4 || constitutionModifierRoll == 5) {
+      this.characterConstitutionModifier = -3;
+    }
+    if (constitutionModifierRoll == 6 || constitutionModifierRoll == 7) {
+      this.characterConstitutionModifier = -2;
+    }
+    if (constitutionModifierRoll == 8 || constitutionModifierRoll == 9) {
+      this.characterConstitutionModifier = -1;
+    }
+    if (constitutionModifierRoll == 10 || constitutionModifierRoll == 11) {
+      this.characterConstitutionModifier = 0;
+    }
+    if (constitutionModifierRoll == 12 || constitutionModifierRoll == 13) {
+      this.characterConstitutionModifier = 1;
+    }
+    if (constitutionModifierRoll == 14 || constitutionModifierRoll == 15) {
+      this.characterConstitutionModifier = 2;
+    }
+    if (constitutionModifierRoll == 16 || constitutionModifierRoll == 17) {
+      this.characterConstitutionModifier = 3;
+    }
+    if (constitutionModifierRoll == 18 || constitutionModifierRoll == 19) {
+      this.characterConstitutionModifier = 4;
+    }
+    if (constitutionModifierRoll == 20) {
+      this.characterConstitutionModifier = 5;
+    }
+    this.characterConstitution += this.characterConstitutionModifier;
+    if (this.characterConstitution <= 0) {
+      this.characterConstitution = 1;
+    }
+  }
 
-    rollWisdom() {
-        let wisdomModifier = Math.floor((Math.random() * 20) + 1);
-        if (wisdomModifier == 1) {
-            this.characterWisdom -= 5;
-        }
-        if (wisdomModifier == 2 || wisdomModifier == 3) {
-            this.characterWisdom -= 4;
-        }
-        if (wisdomModifier == 4 || wisdomModifier == 5) {
-            this.characterWisdom -= 3;
-        }
-        if (wisdomModifier == 6 || wisdomModifier == 7) {
-            this.characterWisdom -= 2;
-        }
-        if (wisdomModifier == 8 || wisdomModifier == 9) {
-            this.characterWisdom -= 1;
-        }
-        if (wisdomModifier == 12 || wisdomModifier == 13) {
-            this.characterWisdom += 1;
-        }
-        if (wisdomModifier == 14 || wisdomModifier == 15) {
-            this.characterWisdom += 2;
-        }
-        if (wisdomModifier == 16 || wisdomModifier == 17) {
-            this.characterWisdom += 3;
-        }
-        if (wisdomModifier == 18 || wisdomModifier == 19) {
-            this.characterWisdom += 4
-        }
-        if (wisdomModifier == 20) {
-            this.characterWisdom += 5;
-        }
+  rollWisdom() {
+    let wisdomModifierRoll = Math.floor(Math.random() * 20 + 1);
+    if (wisdomModifierRoll == 1) {
+      this.characterWisdomModifier = -5;
     }
+    if (wisdomModifierRoll == 2 || wisdomModifierRoll == 3) {
+      this.characterWisdomModifier = -4;
+    }
+    if (wisdomModifierRoll == 4 || wisdomModifierRoll == 5) {
+      this.characterWisdomModifier = -3;
+    }
+    if (wisdomModifierRoll == 6 || wisdomModifierRoll == 7) {
+      this.characterWisdomModifier = -2;
+    }
+    if (wisdomModifierRoll == 8 || wisdomModifierRoll == 9) {
+      this.characterWisdomModifier = -1;
+    }
+    if (wisdomModifierRoll == 10 || wisdomModifierRoll == 11) {
+      this.characterWisdomModifier = 0;
+    }
+    if (wisdomModifierRoll == 12 || wisdomModifierRoll == 13) {
+      this.characterWisdomModifier = 1;
+    }
+    if (wisdomModifierRoll == 14 || wisdomModifierRoll == 15) {
+      this.characterWisdomModifier = 2;
+    }
+    if (wisdomModifierRoll == 16 || wisdomModifierRoll == 17) {
+      this.characterWisdomModifier = 3;
+    }
+    if (wisdomModifierRoll == 18 || wisdomModifierRoll == 19) {
+      this.characterWisdomModifier = 4;
+    }
+    if (wisdomModifierRoll == 20) {
+      this.characterWisdomModifier = 5;
+    }
+    this.characterWisdom += this.characterWisdomModifier;
+  }
 
-    rollIntelligence() {
-        let intelligenceModifier = Math.floor((Math.random() * 20) + 1);
-        if (intelligenceModifier == 1) {
-            this.characterIntelligence -= 5;
-        }
-        if (intelligenceModifier == 2 || intelligenceModifier == 3) {
-            this.characterIntelligence -= 4;
-        }
-        if (intelligenceModifier == 4 || intelligenceModifier == 5) {
-            this.characterIntelligence -= 3;
-        }
-        if (intelligenceModifier == 6 || intelligenceModifier == 7) {
-            this.characterIntelligence -= 2;
-        }
-        if (intelligenceModifier == 8 || intelligenceModifier == 9) {
-            this.characterIntelligence -= 1;
-        }
-        if (intelligenceModifier == 12 || intelligenceModifier == 13) {
-            this.characterIntelligence += 1;
-        }
-        if (intelligenceModifier == 14 || intelligenceModifier == 15) {
-            this.characterIntelligence += 2;
-        }
-        if (intelligenceModifier == 16 || intelligenceModifier == 17) {
-            this.characterIntelligence += 3;
-        }
-        if (intelligenceModifier == 18 || intelligenceModifier == 19) {
-            this.characterIntelligence += 4
-        }
-        if (intelligenceModifier == 20) {
-            this.characterIntelligence += 5;
-        }
+  rollIntelligence() {
+    let intelligenceModifierRoll = Math.floor(Math.random() * 20 + 1);
+    if (intelligenceModifierRoll == 1) {
+      this.characterIntelligenceModifier = -5;
     }
+    if (intelligenceModifierRoll == 2 || intelligenceModifierRoll == 3) {
+      this.characterIntelligenceModifier = -4;
+    }
+    if (intelligenceModifierRoll == 4 || intelligenceModifierRoll == 5) {
+      this.characterIntelligenceModifier = -3;
+    }
+    if (intelligenceModifierRoll == 6 || intelligenceModifierRoll == 7) {
+      this.characterIntelligenceModifier = -2;
+    }
+    if (intelligenceModifierRoll == 8 || intelligenceModifierRoll == 9) {
+      this.characterIntelligenceModifier = -1;
+    }
+    if (intelligenceModifierRoll == 10 || intelligenceModifierRoll == 11) {
+      this.characterIntelligenceModifier = 0;
+    }
+    if (intelligenceModifierRoll == 12 || intelligenceModifierRoll == 13) {
+      this.characterIntelligenceModifier = 1;
+    }
+    if (intelligenceModifierRoll == 14 || intelligenceModifierRoll == 15) {
+      this.characterIntelligenceModifier = 2;
+    }
+    if (intelligenceModifierRoll == 16 || intelligenceModifierRoll == 17) {
+      this.characterIntelligenceModifier = 3;
+    }
+    if (intelligenceModifierRoll == 18 || intelligenceModifierRoll == 19) {
+      this.characterIntelligenceModifier = 4;
+    }
+    if (intelligenceModifierRoll == 20) {
+      this.characterIntelligenceModifier = 5;
+    }
+    this.characterIntelligence += this.characterIntelligenceModifier;
+  }
 
-    rollCharisma() {
-        let charismaModifier = Math.floor((Math.random() * 20) + 1);
-        if (charismaModifier == 1) {
-            this.characterCharisma -= 5;
-        }
-        if (charismaModifier == 2 || charismaModifier == 3) {
-            this.characterCharisma -= 4;
-        }
-        if (charismaModifier == 4 || charismaModifier == 5) {
-            this.characterCharisma -= 3;
-        }
-        if (charismaModifier == 6 || charismaModifier == 7) {
-            this.characterCharisma -= 2;
-        }
-        if (charismaModifier == 8 || charismaModifier == 9) {
-            this.characterCharisma -= 1;
-        }
-        if (charismaModifier == 12 || charismaModifier == 13) {
-            this.characterCharisma += 1;
-        }
-        if (charismaModifier == 14 || charismaModifier == 15) {
-            this.characterCharisma += 2;
-        }
-        if (charismaModifier == 16 || charismaModifier == 17) {
-            this.characterCharisma += 3;
-        }
-        if (charismaModifier == 18 || charismaModifier == 19) {
-            this.characterCharisma += 4
-        }
-        if (charismaModifier == 20) {
-            this.characterCharisma += 5;
-        }
+  rollCharisma() {
+    let charismaModifierRoll = Math.floor(Math.random() * 20 + 1);
+    if (charismaModifierRoll == 1) {
+      this.characterCharismaModifier = -5;
     }
+    if (charismaModifierRoll == 2 || charismaModifierRoll == 3) {
+      this.characterCharismaModifier = -4;
+    }
+    if (charismaModifierRoll == 4 || charismaModifierRoll == 5) {
+      this.characterCharismaModifier = -3;
+    }
+    if (charismaModifierRoll == 6 || charismaModifierRoll == 7) {
+      this.characterCharismaModifier = -2;
+    }
+    if (charismaModifierRoll == 8 || charismaModifierRoll == 9) {
+      this.characterCharismaModifier = -1;
+    }
+    if (charismaModifierRoll == 10 || charismaModifierRoll == 11) {
+      this.characterCharismaModifier = 0;
+    }
+    if (charismaModifierRoll == 12 || charismaModifierRoll == 13) {
+      this.characterCharismaModifier = 1;
+    }
+    if (charismaModifierRoll == 14 || charismaModifierRoll == 15) {
+      this.characterCharismaModifier = 2;
+    }
+    if (charismaModifierRoll == 16 || charismaModifierRoll == 17) {
+      this.characterCharismaModifier = 3;
+    }
+    if (charismaModifierRoll == 18 || charismaModifierRoll == 19) {
+      this.characterCharismaModifier = 4;
+    }
+    if (charismaModifierRoll == 20) {
+      this.characterCharismaModifier = 5;
+    }
+    this.characterCharisma += this.characterCharismaModifier;
+  }
+
+  levelUp() {
+    if (this.characterExperience % 1000 === 0) {
+      this.characterLevel++;
+      this.characterConstitution += 5 + this.characterConstitutionModifier;
+    }
+    if (this.characterLevel % 2 === 0) {
+      this.characterAttackRoll++;
+    }
+  }
 }
 
-export { Character }
+export { Character };
