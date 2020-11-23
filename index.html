@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style.css" class="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya&family=Almendra&display=swap"
+      rel="stylesheet"
+    />
+    <title>DnD Creator</title>
   </head>
   <body>
     <div class="container">
@@ -11,11 +18,27 @@
         <h1 class="title">EverCraft Kata</h1>
       </header>
       <div class="character">
-        <h2 class="character-name">Test</h2>
-        <h3 id="character-alignment" class="character-alignment"></h3>
-        <button id="evil-alignment" class="evil-alignment">Evil</button>
-        <button id="neutral-alignment" class="neutral-alignment">Neutral</button>
-        <button id="good-alignment" class="good-alignment">Good</button>
+        <h2 class="character-name"></h2>
+        <input
+          type="text"
+          id="character-name-input"
+          class="character-name-input"
+          placeholder="Enter a character name"
+          autofocus
+        />
+      </div>
+      <h3 id="character-alignment" class="character-alignment">
+        Select an alignment:
+      </h3>
+      <div class="alignment">
+
+        <div class="alignment-buttons">
+          <button id="evil-alignment" class="evil-alignment">Evil</button>
+          <button id="neutral-alignment" class="neutral-alignment">
+            Neutral
+          </button>
+          <button id="good-alignment" class="good-alignment">Good</button>
+        </div>
       </div>
       <div class="character-stats">
         <p class="character-armor">Armor: 10</p>
@@ -27,6 +50,7 @@
         <p class="character-intelligence">Intelligence: 10</p>
         <p class="character-charisma">Charisma: 10</p>
       </div>
+      <footer class="footer">2020 Levi Schroeder</footer>
     </div>
   </body>
   <script src="src/js/app.js" type="module"></script>
